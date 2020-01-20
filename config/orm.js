@@ -46,15 +46,14 @@ function objToSql(ob) {
 // https://en.wikipedia.org/wiki/SQL_injection
 var orm = {
     
-  selectAll: function(tableInput, cb) {
+  selectAll: function(table, cb) {
      
-  var statement= connection.query("SELECT * FROM ?? ", tableInput, function(err, result) {
-      if (err) throw err;
+  var dbQuery = "SELECT * FROM " + table + ";";
+   connection.query( dbQuery, function(err, result) {
+      if (err) {throw err;}
       console.log(result);
       cb(result)
     });
-     
-    console.log(statement.sql)
   },
 
   insertOne: function(table, cols, vals, cb) {
@@ -91,7 +90,17 @@ var orm = {
       if (err) {
         throw err;
       }
+      cb(result);
+    });
+  },
 
+  deleteOne: function(table, condition, cb){
+    var queryString = "DELETE FROM" + table + "WHERE" + condition;
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
       cb(result);
     });
   }

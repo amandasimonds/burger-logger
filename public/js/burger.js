@@ -1,16 +1,3 @@
-// $("#addBtn").on("click", function(event){
-//     event.preventDefault();
-//      var userData = {
-//          burger_name: $("#burgerTxt").val(),
-//          devoured: 0
-//      }
-
-//     $.post("/api/burgers", userData, function(result){
-//         console.log(result);
-//         location.reload()
-//     })
-// })
-
 $(function(){
 
     $("#addBtn").on("click", function(event) {
