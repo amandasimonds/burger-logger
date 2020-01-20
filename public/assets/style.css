@@ -18,3 +18,13 @@ li {
     margin-bottom: 5px;
   }
   
+  .container{
+    border: 1px solid gray;
+    background-color: lightgreen;
+    color:black;
+  }
+
+  h2{
+    font-size:60px;
+    color:red;
+  }

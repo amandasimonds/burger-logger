@@ -1,9 +1,9 @@
-const orm = require("../config/orm")
+const orm = require("../config/orm.js")
 
 var burger = {
-  all: function(cb) {
-    orm.selectAll("burgers", function(res) {
-      cb(res);
+  all: function(  tableInput, cb) {
+    orm.selectAll( tableInput,  function(result) {
+      cb(result);
     });
   },
   // The variables cols and vals are arrays.
