@@ -1,6 +1,6 @@
 $(function(){
 
-    $("#addBtn").on("click", function(event) {
+    $(".addBtn").on("click", function(event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
         var newBurger = {
@@ -19,7 +19,7 @@ $(function(){
           });
       });
     
-    $("#eatBtn").on("click", function(event) {
+    $(".eatBtn").on("click", function(event) {
       event.preventDefault();
 
       var id = $(this).data("id");
@@ -36,11 +36,11 @@ $(function(){
       });  
     });
     
-    $("#trashBtn").on("click", function(event) {
+    $(".trashBtn").on("click", function(event) {
       event.preventDefault();
       var id = $(this).data("id");
       
-      $.ajax("/api/burgers/"+id, {
+      $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(function(){
         console.log("burger deleted!")

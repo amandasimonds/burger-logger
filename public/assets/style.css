@@ -1,8 +1,6 @@
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
+body{
+  font-family: verdana;
+}
   
   .label {
     font-weight: bold;
@@ -19,12 +17,46 @@ li {
   }
   
   .container{
-    border: 1px solid gray;
-    background-color: lightgreen;
-    color:black;
+    border: 1px solid lightgray;
+    width:80%;
+    border-radius:5px;
+    padding:20px;
+    margin:20px;
   }
 
   h2{
-    font-size:60px;
-    color:red;
+    font-size:20px;
+  }
+
+  .order{
+    background-color: orange;
+    margin:10px;
+    padding: 15px;
+    border-radius:10px;
+  }
+
+  .ready{
+    background-color:red;
+    margin:10px;
+    padding: 15px;
+    border-radius:10px;
+  }
+
+  
+  .devoured{
+    background-color: yellow;
+    margin:10px;
+    padding: 15px;
+    border-radius:10px;
+  }
+
+  .btn{
+    background-color: white;
+    border: none;
+    padding:5px;
+    cursor: pointer;
+    margin-top:5px;
+    margin-bottom: 5px;
+    font-family: verdana;
+    border-radius: 5px;
   }
