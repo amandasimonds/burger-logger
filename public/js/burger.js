@@ -9,28 +9,44 @@ $(function(){
         }
 
         console.log(newBurger);
-          $.ajax({
-            method: "POST",
-            url: "/api/burgers", 
+
+          $.ajax("/api/burgers", {
+            type: "POST",
             data: newBurger
-          }).then(function(data) {
+          }).then(function() {
             // reload page to display devoured burger in proper column
             location.reload()
           });
       });
     
-    $(".btn").on("click", function(event) {
+    $("#eatBtn").on("click", function(event) {
       event.preventDefault();
-      let id = this.parentNode[0].value;
+
+      var id = $(this).data("id");
+      var devouredState = {
+        devoured: 1
+      };
       
-      $.ajax({
-        method: "PUT",
-        url: "/burgers/" + id
-      }).then(function(data){
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: devouredState
+      }).then(function(){
+        console.log("burger devoured!")
         location.reload();
-      })  
+      });  
+    });
     
-    })
-    
+    $("#trashBtn").on("click", function(event) {
+      event.preventDefault();
+      var id = $(this).data("id");
+      
+      $.ajax("/api/burgers/"+id, {
+        type: "DELETE"
+      }).then(function(){
+        console.log("burger deleted!")
+        location.reload();
+      });  
+    });
+
     })
     
