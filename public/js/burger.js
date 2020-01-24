@@ -37,6 +37,7 @@ $(function(){
     });
     
     $(".trashBtn").on("click", function(event) {
+      console.log("trash btn");
       event.preventDefault();
       var id = $(this).data("id");
       

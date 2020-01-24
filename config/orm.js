@@ -95,7 +95,7 @@ var orm = {
   },
 
   deleteOne: function(table, condition, cb){
-    var queryString = "DELETE FROM" + table + "WHERE" + condition;
+    var queryString = "DELETE FROM " + table + " WHERE " + condition;
     console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
