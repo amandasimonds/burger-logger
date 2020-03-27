@@ -13,10 +13,13 @@ Express, Handlebars, JavaScript, ORM, AJAX, MySQL
 
 ### Process
 - Set up Express Server
-- Created html wireframe
-- Wrote JavaScript logic to create and delete notes
-- Created Db.json and routes for posting and getting from the JSON file
-- Deployed to Heroku
+- HTML wireframe
+- Set up Database and Database connection
+- Established route connections
+- Set up the controllers (ORM)
+- Wrote logic to handle AJAX requests
+- Developed Handlebars logic for changing the DOM
+- Cleaned up code and added styling with CSS
 
 ### Future Development
 - Log In authentication
