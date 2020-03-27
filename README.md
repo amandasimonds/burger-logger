@@ -21,4 +21,4 @@ Express, Handlebars, JavaScript, ORM, AJAX, MySQL
 ### Future Development
 - Log In authentication
   
-![](/public/assets/burger.jpg)
+![](/public/assets/burgerlogger.JPG)
