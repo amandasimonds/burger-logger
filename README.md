@@ -6,7 +6,7 @@
 - Click the "eat" button to devour it
 - Click the trash button to throw the trash away.
 
-Open https://notetaker-amazing.herokuapp.com/ to start using Note Taker.
+Open https://supertastyburgerapp.herokuapp.com/ to start using Burger Logger.
 
 ### Technologies
 Express, Handlebars, JavaScript, ORM, AJAX, MySQL
