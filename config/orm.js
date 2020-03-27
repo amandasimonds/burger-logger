@@ -38,25 +38,24 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-// Object Relational Mapper (ORM)
-
+// Object Relational Mapper (ORM )
 // The ?? signs are for swapping out table or column names
 // The ? signs are for swapping out other values
 // These help avoid SQL injection
 // https://en.wikipedia.org/wiki/SQL_injection
 var orm = {
-    
-  selectAll: function(table, cb) {
-     
-  var queryString = "SELECT * FROM " + table + ";";
-   connection.query( queryString, function(err, result) {
-      if (err) {throw err;}
+
+  selectAll: function (table, cb) {
+
+    var queryString = "SELECT * FROM " + table + ";";
+    connection.query(queryString, function (err, result) {
+      if (err) { throw err; }
       console.log(result);
       cb(result)
     });
   },
 
-  insertOne: function(table, cols, vals, cb) {
+  insertOne: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -68,7 +67,7 @@ var orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, vals, function (err, result) {
       if (err) {
         throw err;
       }
@@ -77,7 +76,7 @@ var orm = {
     });
   },
 
-  updateOne:function(table, objColVals, condition, cb) {
+  updateOne: function (table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
@@ -86,7 +85,7 @@ var orm = {
     queryString += condition;
 
     console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
@@ -94,10 +93,10 @@ var orm = {
     });
   },
 
-  deleteOne: function(table, condition, cb){
+  deleteOne: function (table, condition, cb) {
     var queryString = "DELETE FROM " + table + " WHERE " + condition;
     console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
